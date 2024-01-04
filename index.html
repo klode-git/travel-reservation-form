@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Reservation Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="form-header">
+      <h3>Travel reservation form</h3>
+      <p>* denotes mandatory</p>
+    </div>
+
+    <form id="form"> 
+            <div>
+                <label for="name">Full name*:</label>
+                <input type="text" id="name" placeholder="FirstName LastName">
+                <p class="error"></p>
+            </div>
+            
+            <div>
+                <label for="email">Email address*:</label>
+                <input type="email" id="email">
+                <p class="error"></p>
+
+            </div>
+            <div>
+              <label for="tour">Select Tour Package*:</label>
+              <select id="tour">
+                  <option value="">Choose a city: </option>
+                  <option value="berlin">Berlin</option>
+                  <option value="amsterdam">Amsterdam</option>
+                  <option value="paris">Paris</option>
+              </select>
+              <p class="error"></p>
+
+            </div>
+            <div>
+                <label for="arrival">Arrival date*:</label>
+                <input type="date" id="arrival">
+            </div>
+            <p class="error"></p>
+
+            <div>
+              <label for="persons">Number of persons*:</label>
+              <input type="number" id="persons">
+              <p class="error"></p>
+
+            </div>
+            <div class="avail">
+              <label for="avail">What do you want to avail?*</label>
+              <label for="boarding">Boarding <input type="checkbox" id="boarding"></label>
+              <label for="fooding">Fooding <input type="checkbox" id="fooding"></label>
+              <label for="sight-seeing">Sight Seeing <input type="checkbox" id="sight-seeing"></label>
+              <p class="error"></p>
+            </div>
+            <div>
+              <label for="discount">Discount Coupon code:</label>
+              <input type="text" id="discount">
+              <p class="error"></p>
+            </div>
+            <div>
+              <label for="terms">Terms and conditions*</label>
+              <label for="agree"> I agree <input type="radio" id="agree" name="terms"></label>
+              <label for="disagree">I disagree <input type="radio" id="disagree" name="terms"></label>
+              <p class="error"></p>
+            </div>
+            <input type="submit" value="Complete reservation">
+            <div id="successful"></div>
+        </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
